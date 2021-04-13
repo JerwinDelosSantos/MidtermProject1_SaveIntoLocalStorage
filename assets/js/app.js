@@ -1,5 +1,5 @@
 //variables
-
+const tweetList = document.getElementById('tweet-list');
 
 
 //Event Listeners
@@ -17,5 +17,26 @@ function newTweet(e){
     e.preventDefault();
 
     //Read Textarea value
-    const tweet = document.getElementById()
+    const tweet = document.getElementById('tweet').value;
+
+
+    //Create the remove button
+    const removeBtn = document.createElement('a');
+    removeBtn.classList = 'remove-tweet';
+    removeBtn.textContent = 'X';
+
+
+
+    //Create an <li> Element
+    const li = document.createElement('li');
+    li.textContent = tweet;
+    
+
+
+    //Add the remove button to each tweet
+    li.appendChild(removeBtn);
+
+
+    //Add to the list
+    tweetList.appendChild(li);
 }

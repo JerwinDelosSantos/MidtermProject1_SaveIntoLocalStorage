@@ -11,6 +11,9 @@ function eventListeners(){
     //Remove tweet from the list
     tweetList.addEventListener('click', removeTweet);
 
+
+    //Document
+    document.addEventListener('DOMContentLoaded', localStorageOnLoad);
 }
 
 
@@ -76,4 +79,11 @@ function getTweetsFromStorage() {
         tweets = JSON.parse(tweetsLS);
     }
     return tweets;
+}
+
+//Prints Local Storage tweets on Load
+function localStorageOnLoad() {
+    let tweets = getTweetsFromStorage();
+
+    //Loop throught storage and then Print the values
 }
